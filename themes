@@ -1,0 +1,1 @@
+walls -F -t -E 100 -y 100 -P --index-info '' -J 0 -A 'echo %F'

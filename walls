@@ -1,8 +1,24 @@
 #!/usr/bin/perl
 chdir '/home/c/img/bg/';
+
+# specifies which field to sort by
+# change to 1 to sort by luminance
+my $prop = 0;
+
+open my $handle, '<', 'hues';
+chomp(my @entries = <$handle>);
+close $handle;
+
+my %h = map {my @e = split(); $e[$prop] => $e[3] } @entries;
+
+my @hues = sort { $a <=> $b } keys(%h);
+my @files = @h{@hues};
+
 $W = (`i3_get_output` eq 'HDMI-0' ? 1280 : 1440) - 2;
-chomp(@files = `ls -tb`);
-if (@bg = `feh -Twalls -W $W @files`) {
-  system "wal -i $bg[-1]";
+if (my @bg = `feh -Twalls -W $W @files`) {
+  my $wall = $bg[-1];
+  # comment out any programs you don't use
+  system "wal -i $wall";
   system 'pywalfox update';
+  # system "feh --bg-fill $wall";
 }
