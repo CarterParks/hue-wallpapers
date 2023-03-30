@@ -19,10 +19,7 @@ This is pretty tuned to my system, so I can offer no promises of portability.
 ## Install
 * Install dependencies on your system.
 * Download all files.
-* At the top of `walls` and `wall-log`, edit 
-```
-chdir '/your/wall/dir/'
-```
+* At the top of `walls` and `wall-log`, edit `chdir '/your/wall/dir/'`
 to reflect your wallpaper directory.
 * Place `walls` and `wall-log` in your `$PATH`. 
 Make sure they're executable.
