@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-chdir '/your/wall/dir/'
+chdir '/home/c/img/bg'
 
 # specifies which field to sort by
 # change to 1 to sort by luminance
@@ -17,7 +17,7 @@ my @files = @h{@hues};
 if (my @bg = `feh -Twalls -W $W @files`) {
   my $wall = $bg[-1];
   # comment out any programs you don't use
-	# system "wal -i $wall";
-  # system 'pywalfox update';
-  system "feh --bg-fill $wall";
+	system "wal -i $wall";
+  system 'pywalfox update';
+	# system "feh --bg-fill $wall";
 }
