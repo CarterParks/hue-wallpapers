@@ -2,7 +2,15 @@
 A collection of tools to sort wallpapers by color, and apply theming.
 This is pretty tuned to my system, so I can offer no promises of portability.
 
+<<<<<<< Updated upstream
 ## Dependecies
+=======
+## Demo
+
+![Demo](https://carter-parks.net/hue-wallpapers-demo.gif)
+
+## Deps
+>>>>>>> Stashed changes
 * [Perl](https://www.perl.org/)
 * [Feh](https://feh.finalrewind.org/)
 * [ImageMagick](https://imagemagick.org/index.php)
